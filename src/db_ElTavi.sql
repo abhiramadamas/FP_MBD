@@ -101,3 +101,14 @@ CREATE TABLE Pembayaran(
             ON UPDATE CASCADE
             ON DELETE CASCADE
 );
+
+CREATE TABLE Log_Perubahan(
+    id_Log_Perubahan VARCHAR(5) PRIMARY KEY,
+    id_Sewa VARCHAR(5) NOT NULL,
+    old_Start_From TIMESTAMP NOT NULL,
+    old_Finish_At TIMESTAMP NOT NULL,
+    diubah_At TIMESTAMP NOT NULL,
+    status VARCHAR(256) NOT NULL,
+    new_Start_From TIMESTAMP NOT NULL,
+    new_Finish_At TIMESTAMP NOT NULL
+);
