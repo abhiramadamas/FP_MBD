@@ -29,14 +29,14 @@ CREATE TABLE Karyawan (
 CREATE TABLE Studio (
     id_Studio VARCHAR(5) PRIMARY KEY,
     nama_Ruangan VARCHAR(256) NOT NULL,
-    harga_Per_Shift NUMERIC(6, 2) NOT NULL,
+    harga_Per_Shift NUMERIC(8, 2) NOT NULL,
     fasilitas TEXT NOT NULL
 );
 
 CREATE TABLE Stok_Jajan (
     id_Jajan VARCHAR(5) PRIMARY KEY,
     nama_Jajan VARCHAR(256) NOT NULL,
-    harga_Satuan NUMERIC(5, 2) NOT NULL,
+    harga_Satuan NUMERIC(7, 2) NOT NULL,
     jumlah_Stok INT NOT NULL
 );
 
@@ -71,7 +71,7 @@ CREATE TABLE Nota_Jajan (
 
 CREATE TABLE Pembayaran(
     id_Pembayaran VARCHAR(5) PRIMARY KEY,
-    jumlah_Tagihan NUMERIC(8, 2) NOT NULL,
+    jumlah_Tagihan NUMERIC(10, 2) NOT NULL,
     status_Pembayaran BOOLEAN NOT NULL,
 
     Penyewa_id_Penyewa VARCHAR(5) NOT NULL,
