@@ -29,14 +29,14 @@ CREATE TABLE Karyawan (
 CREATE TABLE Studio (
     id_Studio VARCHAR(5) PRIMARY KEY,
     nama_Ruangan VARCHAR(256) NOT NULL,
-    harga_Per_Shift NUMERIC(6, 2) NOT NULL,
+    harga_Per_Shift NUMERIC(8, 2) NOT NULL,
     fasilitas TEXT NOT NULL
 );
 
 CREATE TABLE Stok_Jajan (
     id_Jajan VARCHAR(5) PRIMARY KEY,
     nama_Jajan VARCHAR(256) NOT NULL,
-    harga_Satuan NUMERIC(5, 2) NOT NULL,
+    harga_Satuan NUMERIC(7, 2) NOT NULL,
     jumlah_Stok INT NOT NULL
 );
 
@@ -71,7 +71,7 @@ CREATE TABLE Nota_Jajan (
 
 CREATE TABLE Pembayaran(
     id_Pembayaran VARCHAR(5) PRIMARY KEY,
-    jumlah_Tagihan NUMERIC(8, 2) NOT NULL,
+    jumlah_Tagihan NUMERIC(10, 2) NOT NULL,
     status_Pembayaran BOOLEAN NOT NULL,
 
     Penyewa_id_Penyewa VARCHAR(5) NOT NULL,
@@ -118,5 +118,29 @@ CREATE TABLE Log_Perubahan(
 /* ===== ===== */
 
 -- Data Table Queries
+INSERT INTO
+    Stok_Jajan(id_Jajan, nama_Jajan, harga_Satuan, jumlah_Stok)
+VALUES
+    ('J0001', 'Beng-Beng', 3500.00, 40),
+    ('J0002', 'Chitato', 17000.00, 20),
+    ('J0003', 'Cheetos', 17000.00, 20),
+    ('J0004', 'Qtela', 17000.00, 20),
+    ('J0005', 'Taro', 17000.00, 20),
+    ('J0006', 'Pocky', 15000.00, 30),
+    ('J0007', 'Richeese Nabati', 3500.00, 50),
+    ('J0008', 'Tango', 3500.00, 50),
+    ('J0009', 'Pringles', 15000.00, 30),
+    ('J0010', 'Pop Mie', 15000.00, 15),
+    ('J0011', 'Mie Sedap Cup', 15000.00, 15),
+    ('J0012', 'Fanta', 6000.00, 100),
+    ('J0013', 'Coca-cola', 6000.00, 100),
+    ('J0014', 'Sprite', 6000.00, 100),
+    ('J0015', 'Ultra Milk', 8000.00, 100),
+    ('J0016', 'Indomilk', 8000.00, 100),
+    ('J0017', 'Pocari Sweat', 9000.00, 100),
+    ('J0018', 'Minute Maid', 8000.00, 100),
+    ('J0019', 'Aqua', 4000.00, 100),
+    ('J0020', 'Kapal Api', 3000.00, 100),
+    ('J0021', 'Kratingdaeng', 7000.00, 100);
 
 /* ===== ===== */
