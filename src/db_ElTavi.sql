@@ -11,6 +11,8 @@ CREATE DATABASE db_eltavi
     TABLESPACE = pg_default
     CONNECTION LIMIT = -1;
 
+-- Create Tables
+
 CREATE TABLE Penyewa (
     id_Penyewa VARCHAR(5) PRIMARY KEY,
     nama_Penyewa VARCHAR(20) NOT NULL,
@@ -112,3 +114,9 @@ CREATE TABLE Log_Perubahan(
     new_Start_From TIMESTAMP NOT NULL,
     new_Finish_At TIMESTAMP NOT NULL
 );
+
+/* ===== ===== */
+
+-- Data Table Queries
+
+/* ===== ===== */
